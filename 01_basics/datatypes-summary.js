@@ -35,4 +35,9 @@
   console.log(typeof heros); // Output: object
   console.log(typeof myobject); // Output: object           
     console.log(typeof myFunction); // Output: function
-    
+
+//=============================================================================================
+ // stack ( primitive types ) and heap ( reference types ) memory in JavaScript
+ // primitive types are stored in stack memory because they have a fixed size and are accessed directly
+ // reference types are stored in heap memory because they can have a variable size and are accessed indirectly through a reference (pointer) to the memory location where the data is stored   
+  let my
