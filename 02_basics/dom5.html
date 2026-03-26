@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit and Remove DOM Elements</title>
+</head>
+<body style="background-color: aquamarine; color:aliceblue;">
+
+    <ul class="language">
+        <h1>Languages List</h1>
+    </ul>
+
+<script>
+
+// 🔹 Add language (basic way)
+function addLanguage(langName) {
+    const li = document.createElement('li'); // create li
+    li.innerHTML = langName; // add text
+    document.querySelector('.language').appendChild(li); // append to ul
+}
+
+addLanguage("python");
+addLanguage("yashi");
+
+
+// 🔹 Optimized way
+function addOptionLanguage(langName) {
+    const li = document.createElement('li');
+    li.appendChild(document.createTextNode(langName)); // better way
+    document.querySelector('.language').appendChild(li);
+}
+
+addOptionLanguage("golang");
+
+
+// 🔹 EDIT (replace 2nd element)
+const secondLang = document.querySelector("li:nth-child(2)");
+
+const newli = document.createElement('li');
+newli.textContent = "mojo";
+
+if (secondLang) {
+    secondLang.replaceWith(newli);
+}
+
+
+// 🔹 REMOVE (last element)
+const lastLang = document.querySelector("li:last-child");
+
+if (lastLang) {
+    lastLang.remove();
+}
+
+</script>
+
+</body>
+</html>
+// 🔹 Function to add new language (basic way)
+function addLanguage(langName) {
+    const li = document.createElement('li'); // create <li> element (in memory)
+
+    li.innerHTML = langName; // add text inside li (simple but less optimal)
+
+    document.querySelector('.language').appendChild(li); 
+    // select parent (.language) and add li into DOM
+}
+
+addLanguage("python");
+addLanguage("yashi");
+
+
+// 🔹 Optimized way (best practice)
+function addOptionLanguage(langName) {
+    const li = document.createElement('li'); // create li
+
+    li.appendChild(document.createTextNode(langName)); 
+    // better than innerHTML (safe + fast)
+
+    document.querySelector('.language').appendChild(li); 
+    // append to parent
+}
+
+addOptionLanguage('golang');
+
+
+// 🔹 EDIT ELEMENT
+
+const secondLang = document.querySelector("li:nth-child(2)"); 
+// select 2nd li element
+
+// ❌ wrong way (replaces entire HTML, not efficient)
+// secondLang.innerHTML = "mojo"
+
+// ✅ correct way
+const newli = document.createElement('li'); 
+newli.textContent = "mojo"; // set text
+
+secondLang.replaceWith(newli); 
+// replace old element with new one
+
+
+// 🔹 REMOVE ELEMENT
+
+const lastLang = document.querySelector("li:last-child"); 
+// select last li
+
+lastLang.remove(); 
+// remove element from DOM
+createElement() → new element banata hai
+👉 innerHTML → simple but unsafe/slow
+👉 createTextNode() → optimized way
+
+👉 appendChild() → element add karta hai
+
+👉 querySelector() → element select karta hai
+
+👉 replaceWith() → element replace karta hai
+
+👉 remove() → element delete karta hai

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom manupulation</title>
+    <Style>
+        .bg {
+            background-color:black;
+            color: aliceblue;
+        }
+    </Style>
+</head>
+<body>
+    <div class ="bg">
+
+        <h1 id ="title" class="heading"> we have written this html file to do manupulation using its 
+            id and class target by get element property
+            <span>
+                <textarea name=abhi tu apna nam likh ke bata 
+            </span>
+        </h1>
+        <p> just for the fun i am doing this aree nhi bahi we are going to these in the server bro </p>
+    </div>
+    
+</body>3
+</html> 
+/* textcontext and innertext are two dom properties used to get or set the text inside an element , but they bhave differently :
+: innerText respects CSS styling and hidden elements, while textContent returns all text exactly as it appears in the DOM tree
+ other some structural properties 
+ 
+
+
+styling attribute 
+ style -> inline css styles  -> el.style.color = "red"
+ classname -> string of classes -> el.className = "btn primary"
+ classList -> token list of classes -> el.classList.add("active)
+ id -> Element ID -> el.id = "headers"
+ attributes -> all attributes -> <el class="attribute values"></el>.value
+ getAtttribute () ,setAttribute() Read/ write attributes => el.setAttributes("src","img.png")
+
+
+querySelector() / querySelectorAll() → CSS-style selection.
+
+createElement() → Create new nodes dynamically.
+
+appendChild() / removeChild() → Insert/remove nodes.
+
+replaceChild() → Swap nodes.
+
+insertAdjacentHTML() → Insert HTML at specific positions.
+
+cloneNode() → Duplicate elements.
+const tempClassList = document.getElementsByClassName('list-item');
+
+ Access the first element
+tempClassList[0].style.color = "red";
+
+getElementsByClassName() → live collection (updates automatically if DOM changes).
+
+querySelectorAll() → static NodeList (does not auto-update).
+
+Both can be iterated, but querySelectorAll supports forEach directly.
+ 
+*/
+/*Array-like: You can access elements by index (collection[0]), but it’s not a true array.
+
+Live: Updates automatically if the DOM changes (e.g., adding/removing elements).
+
+Length property: collection.length gives the number of elements.
+
+Iteration: Use for loops, but not all array methods (map, forEach) unless you convert it.*/

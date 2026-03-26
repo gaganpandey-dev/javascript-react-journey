@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> my name is gagan pandey and i am learning js with chai with code</h1>
+     <span>
+         here i am using 
+         <h2 id ="pinki" > yeh bhi hai kuch </h2>
+         <h3 class="days"> sunday</h3>
+        <h3 class="days"> monday</h3>
+        <h3 class="days"> tuesday</h3>
+        </span>
+    <script>
+        const parent = document.querySelector('span')
+        console.log(parent );
+        console.log(parent.children);//Sirf direct child elements deta hai
+        console.log(parent.children[1].innerHTML);//Element ke andar ka content deta hai
+        
+    for(let i = 0 ; i< parent.children.length ; i++){
+    console.log(parent.lastElementChild);
+    console.log(parent.firstElementChild);
+    console.log(parent.children[1].innerHTML);
+  
+
+             }
+
+             const dayOne=document.querySelector('.pinki');
+             console.log(days)
+
+
+
+    </script>
+</body>
+</html>
