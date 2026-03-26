@@ -1,0 +1,44 @@
+body {
+  font-family: Arial;
+  text-align: center;
+}
+
+/* container */
+.canvas {
+  margin-top: 50px;
+}
+
+/* 🔥 CARD STYLE */
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 120px;
+  height: 120px;
+
+  margin: 10px;
+  border-radius: 12px;
+
+  font-weight: bold;
+  color: white;
+
+  cursor: pointer;
+
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* hover effect (premium feel 🔥) */
+.button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+}
+
+/* colors */
+#grey { background-color: grey; }
+#red { background-color: red; }
+#pink { background-color: pink; color: black; }
+#blue { background-color: blue; }
+#sky { background-color: skyblue; color: rgb(121, 161, 206); }
+#hara { background-color: green; }
