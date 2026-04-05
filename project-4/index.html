@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 4 </title>
+    <link rel ="stylesheet" type=" text/css" href ="../styles.css"/>
+
+</head>
+<body style ="background-color: rgb(177, 207, 212); color: rgb(40, 80, 80);">
+  
+   <nav>
+     <a href ="/" aria-current="page">HOME</a>
+
+
+   </nav>
+   <div id ="wrapper">
+    <h1> Number guessing game   </h1>
+    <p> Guess a number between 1 and 100 </p>
+    <p> you have 10 attempts    to guess the number</p>
+     <form id ="form">
+        <label for ="guessfield" id="guess"> Enter your guess: </label>
+        <input type ="text" id ="guessfield" class ="guessfield">
+        <input type ="submit" id="Subt" value ="Submit guess"
+        class="guessSubmit">
+        </form>
+
+
+        <div id ="resultParas">
+            <p > Previous Guesses <span class ="guesses"></span></p>
+            <p > Guess Remaining /:  <span class ="lastResult">10</span></p>
+            <p class ="lowOrHi"></p>
+        </div>
+    </div>
+
+    <script src ="chaiaurcode.js"></script>
+    
+</body>
+</html>
